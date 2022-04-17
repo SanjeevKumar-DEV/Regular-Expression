@@ -67,8 +67,20 @@ Example Code : ^#?([a-f0-9]{6}|[a-f0-9]{3})$
 
 ### Quantifiers
 
-#### * Asterisk symbol matches the pattern zero or more times
+#### * Asterik Symbol represents preceding pattern or group of charaters can occur ZERO or more times 
 
+```
+Example Code : ^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w\.-]*)*\/?$
+```
+
+##### Matching Examples : In below example a URI is being matched ZERO or N number of times at the end of the URL.  
+
+- http://tesla.com
+- http://tesla.com.au/
+- http://tesla.com32/12
+- http://tesla.com/test/21312/p
+
+##### Explanation: In above example URI occurs one or more times with any number of word characters hyphen(-) and dot(.)      
 
 #### + Plus symbol matches the pattern one or more times
 
