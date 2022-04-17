@@ -111,6 +111,20 @@ Example Code : ^#?([a-f0-9]{6}|[a-f0-9]{3})$
 
 #### { n } matches the pattern exactly n number of times
 
+```
+Example Code : ^#+([a-f0-9]{6}|[a-f0-9]{3})$
+```
+
+##### Matching Examples : In below example hexdecimal chracters preceded by # symbol can occur exactly 3 times or 6 times as respresented by a number in curly braces {6} and {3}.  
+
+- ###a45322
+- #a45
+- #a453ed
+- #123
+
+##### Explanation: In above examples hexadecimal characters has to occur either 6 times ([a-f0-9]{6} or  3 times[a-f0-9]{3}. 
+
+
 #### { n, } matches the pattern at least n number of times
 
 #### { n, x } matches the pattern from a minimum of n number of times to a maximum of x number of times
