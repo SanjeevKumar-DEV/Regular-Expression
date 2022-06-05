@@ -161,7 +161,7 @@ Example Code : ^(https?:\/\/)?([\da-z\.-]+)\.([a-z]{3,6})$
 Example Code : ^(https?:\/\/){1}([\da-z-]+)\.([a-z]{3,6})$
 ```
 
-##### Matching Examples : Above code enforces three groups of characters in valid URL with below examples using parenthesis followed by quantifiers applied on the whole group. The second group enforces domain name part of the URL with code being ([\da-z-]+) having alphanumeric characters and hyphen in that. The third part of the    
+##### Matching Examples : Above code enforces three groups of characters in valid URL with below examples using parenthesis followed by quantifiers applied on the whole group. The second group enforces SLD(Sub level domain) part of the URL with code being ([\da-z-]+) having alphanumeric characters and hyphen in that. The third part of the group enforces TLD (top level domain) part of the URL.      
 
 - https://tesla.com
 - http://tesla.com
@@ -172,6 +172,20 @@ Example Code : ^(https?:\/\/){1}([\da-z-]+)\.([a-z]{3,6})$
 ##### Explanation: There are three groups used in above code with first group enforcing "http://" or "https://" part of the URL with code being (https?:\/\/){1}. The second group ([\da-z-]+) enforcing alphanumeric or hyphen(-) characters to validate domain name. Before third group a dot(.) is required. The third group is ([a-z]{3,6}) which validates for three to 6 alphabet characters like com, itr, tes, net online etc.         
 
 ### Bracket Expressions
+
+```
+Example Code : ^(https?:\/\/){1}([\da-z-]+)\.([a-z]{3,6})$
+```
+
+##### Matching Examples : The second group of code in above URL in square[] bracket enforces SLD(Sub level domain) part of the URL with code being [\da-z-]+
+
+- https://tesla.com
+- http://tesla.com
+- https://tes2la.gbr
+- https://tesla.net
+- https://tesla1.online
+
+##### Explanation: The second group [\da-z-]+ enforcing alphanumeric or hyphen(-) characters to validate domain[Second level domain] name with number of occurrence being 1 or more. Characters in the bracket have OR relationship in terms of match finding. Therefore it can be read as any digit or any alphabet or hyphen with + symbol after the bracket being the quantifier. 
 
 ### Character Classes
 
