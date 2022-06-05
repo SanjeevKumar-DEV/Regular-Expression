@@ -189,6 +189,20 @@ Example Code : ^(https?:\/\/){1}([\da-z-]+)\.([a-z]{3,6})$
 
 ### Character Classes
 
+```
+Example Code : ^(https?:\/\/){1}([\da-zA-Z]+)\.([\w]{3,6})$
+```
+
+##### Matching Examples : The second group of code in above URL in square[] bracket enforces SLD(Sub level domain) part of the URL with code being [\da-zA-Z]+ and third group [\w] as an example of character classes usage. There are mainly 5 groups of character classes. dot(.) represents any character, \d represents any digit from 0 to 9, \w any alphnumeric character including underscore, a-z any alphabet non-capital letters, A-Z any alphabet capital letters, 0-9 any digits from 0 to 9, \s any space character whitespace, TABS, line breaks, newlines   
+
+- https://teslW.com_
+- http://tesla.com_P
+- https://tes2Ma.gbr
+- https://tesla.net
+- https://tesla1.online
+
+##### Explanation: The second group [\da-zA-Z]+ enforcing alphanumeric characters capital or non-capital to validate domain[Second level domain] name with number of occurrence being 1 or more with examples being (teslW, tes2Ma, tesla1). The second example [\w] denotes any alphanumeric character including underscore in TLD domain name as in above examples (com_, com_P). 
+
 ### The OR Operator
 
 ### Flags
