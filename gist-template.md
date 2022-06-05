@@ -67,7 +67,7 @@ Example Code : ^#?([a-f0-9]{6}|[a-f0-9]{3})$
 
 ### Quantifiers
 
-#### * Asterik Symbol represents preceding pattern or group of charaters can occur ZERO or more times 
+#### * Asterisk Symbol represents preceding pattern or group of charaters can occur ZERO or more times 
 
 ```
 Example Code : ^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w\.-]*)*\/?$
@@ -124,12 +124,52 @@ Example Code : ^#+([a-f0-9]{6}|[a-f0-9]{3})$
 
 ##### Explanation: In above examples hexadecimal characters has to occur either 6 times ([a-f0-9]{6} or  3 times[a-f0-9]{3}. 
 
-
 #### { n, } matches the pattern at least n number of times
+
+```
+Example Code : [1-9]{1}\d{4,}
+```
+
+##### Matching Examples : Above code enforces a minimum 5 digit number or greater. 
+
+- 111111
+- 111111 11111
+- 99991
+- 11122 222232
+
+##### Explanation: Quantifier used in this example for first digit is curly bracket with exact number of digits being 1 {1} between 1 and 9. The second quantifier is curly bracket with min value of 4 and max value of none {4, } which makes it any number acceptable if it is greater than four digits and less than 9 digits. 
 
 #### { n, x } matches the pattern from a minimum of n number of times to a maximum of x number of times
 
+```
+Example Code : ^(https?:\/\/)?([\da-z\.-]+)\.([a-z]{3,6})$
+```
+
+##### Matching Examples : Above code enforces a valid URL with domain name ending between 3 and 6 alphabet characters.  
+
+- https://tesla.com
+- http://tesla.com
+- https://tesla.gbr
+- https://tesla.net
+- https://tesla.online
+
+##### Explanation: Quantifier used in this example is curly bracket with min value of 3 and max value of 6 alphabets characters {3, 6}.
+
 ### Grouping Constructs
+
+```
+Example Code : ^(https?:\/\/){1}([\da-z-]+)\.([a-z]{3,6})$
+```
+
+##### Matching Examples : Above code enforces three groups of characters in valid URL with below examples using parenthesis followed by quantifiers applied on the whole group. The second group enforces domain name part of the URL with code being ([\da-z-]+) having alphanumeric characters and hyphen in that. The third part of the    
+
+- https://tesla.com
+- http://tesla.com
+- https://tesla.gbr
+- https://tesla.net
+- https://tesla.online
+
+##### Explanation: There are three groups used in above code with first group enforcing "http://" or "https://" part of the URL with code being (https?:\/\/){1}. The second group       
 
 ### Bracket Expressions
 
