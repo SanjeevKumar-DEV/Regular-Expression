@@ -165,11 +165,11 @@ Example Code : ^(https?:\/\/){1}([\da-z-]+)\.([a-z]{3,6})$
 
 - https://tesla.com
 - http://tesla.com
-- https://tesla.gbr
+- https://tes2la.gbr
 - https://tesla.net
-- https://tesla.online
+- https://tesla1.online
 
-##### Explanation: There are three groups used in above code with first group enforcing "http://" or "https://" part of the URL with code being (https?:\/\/){1}. The second group       
+##### Explanation: There are three groups used in above code with first group enforcing "http://" or "https://" part of the URL with code being (https?:\/\/){1}. The second group ([\da-z-]+) enforcing alphanumeric or hyphen(-) characters to validate domain name. Before third group a dot(.) is required. The third group is ([a-z]{3,6}) which validates for three to 6 alphabet characters like com, itr, tes, net online etc.         
 
 ### Bracket Expressions
 
