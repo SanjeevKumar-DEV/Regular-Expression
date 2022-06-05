@@ -205,6 +205,20 @@ Example Code : ^(https?:\/\/){1}([\da-zA-Z]+)\.([\w]{3,6})$
 
 ### The OR Operator
 
+```
+Example Code : ^(https?:\/\/){1}(\d|[a-z]|[A-Z]|-)+\.([\w]{3,6})$
+```
+
+##### Matching Examples :  Second group using OR operator with code as (\d|[a-z]|[A-Z]|-])+ 
+
+- https://tesl1W-.com_
+- http://tesla.com_P
+- https://tes2Ma.gbr
+- https://tesla.net
+- https://tesla1.online
+
+##### Explanation: The second group (\d|[a-z]|[A-Z]|-])+ enforcing numeric (\d) OR alphabet characters non-capital(a-z) OR capital (A-Z) OR hyphen(-) to validate domain[Second level domain] name with number of occurrence being 1 or more with examples being (tesl1W-, tesla, tes2Ma).
+
 ### Flags
 
 ### Character Escapes
