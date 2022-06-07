@@ -243,6 +243,20 @@ var newStr = str.replace(/90/g, "100");
 
 ### Character Escapes
 
+```
+Example Code : ^(https?:\/\/){1}([\da-z-]+)\.([a-z]{3,6})$
+```
+
+##### Matching Examples : https?:\/\/ and dot .
+
+- https://tesla.com
+- http://tesla.com
+- https://tes2la.gbr
+- https://tesla.net
+- https://tesla1.online
+
+##### Explanation: Backslash \ is used as escape character in regex expression. In above example forward slash (/) and dot (.) is being escaped using backslash. Dot(.) is special character in context of regex expression and therefore to be used as regular dot(.), it needs to be escaped.  
+
 ## Author
 
 - [Sanjeev Kumar](https://github.com/SanjeevKumar-DEV)
