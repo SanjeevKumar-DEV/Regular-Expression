@@ -221,6 +221,26 @@ Example Code : ^(https?:\/\/){1}(\d|[a-z]|[A-Z]|-)+\.([\w]{3,6})$
 
 ### Flags
 
+#### /pattern/i - Flag i stands for cases insensitive
+
+```
+Example Code : var str = "hello world! Wrting 'Hello World' program is quite a convention.";
+var regex = /hello/i;
+
+var newStr = str.replace(regex, '(Hello)');
+```
+
+##### Explanation: In above example the first occurrence of hello is replaced with Hello having capital H by using the flag i as a cases insensitive search.
+
+#### /pattern/g - Flag g stands for global search
+
+```
+Example Code : var str = "90 is the half of 90 x 2 that is 200.";
+var newStr = str.replace(/90/g, "100");
+```
+
+##### Explanation: In above example all occurrence of number 90 is replaced with 100.
+
 ### Character Escapes
 
 ## Author
